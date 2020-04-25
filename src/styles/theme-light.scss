@@ -1,0 +1,102 @@
+// COLORS
+$color-primary: #0386fc;
+$gray100: #f8f9fa;
+$gray200: #e9ecef;
+$gray300: #dee2e6;
+$gray400: #ced4da;
+$gray500: #adb5bd;
+$gray600: #6c757c;
+$gray700: #495057;
+$gray800: #343a40;
+$gray900: #212529;
+
+// SIZES
+$xs: 0.4rem;
+$sm: 1rem;
+$md: 1.6rem;
+$lg: 2.4rem;
+$xl: 4rem;
+
+main {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+p {
+  font-family: "Roboto";
+  font-size: 1rem;
+  line-height: 1 * 1.4rem;
+  color: $gray600;
+}
+
+.header {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.showcase {
+  padding: $lg;
+  text-align: center;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  &__description {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.heading1 {
+  font-size: 3.2rem;
+  font-family: "Inter";
+  font-weight: 700;
+  letter-spacing: -0.14rem;
+  line-height: 3.2 * 1.2rem;
+  color: $gray900;
+}
+
+.heading2 {
+  font-size: 1.4rem;
+  font-family: "Inter";
+  font-weight: 800;
+  letter-spacing: -0.04rem;
+  line-height: 1.4 * 1.2rem;
+  color: $gray900;
+}
+
+.overline {
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: $color-primary;
+}
+
+.services {
+  display: flex;
+  padding: 2rem;
+  margin: 4rem 0;
+  &__item {
+    padding-right: 4rem;
+  }
+}
+
+.works {
+  &__item {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .heading1 {
+    font-size: 2.2rem;
+    line-height: 2.2 * 1.2rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .services {
+    display: block;
+    width: 100%;
+  }
+}
