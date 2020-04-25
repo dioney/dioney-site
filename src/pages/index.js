@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 
 import UxDesign from "../images/ux-designer.svg"
 import MobileDesign from "../images/mobile-design.svg"
-import DesignSystem from "../images/design-System.svg"
+import DesignSystem from "../images/design-system.svg"
 
 const IndexPage = () => (
   <Layout>
