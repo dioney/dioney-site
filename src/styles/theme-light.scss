@@ -17,6 +17,14 @@ $md: 1.6rem;
 $lg: 2.4rem;
 $xl: 4rem;
 
+// GRID
+$grid-gutter: 1%;
+$grid-columns: 12;
+$grid-max: 1140px;
+* {
+  box-sizing: border-box;
+}
+
 main {
   max-width: 1140px;
   margin: 0 auto;
@@ -29,10 +37,15 @@ p {
   color: $gray600;
 }
 
+.row {
+  display: flex;
+}
+
 .header {
   max-width: 1140px;
   margin: 0 auto;
   padding: 24px;
+  text-align: center;
 }
 
 .showcase {
@@ -44,6 +57,8 @@ p {
   &__description {
     width: 80%;
     margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.2 * 1.4rem;
   }
 }
 
@@ -74,16 +89,83 @@ p {
 
 .services {
   display: flex;
-  padding: 2rem;
   margin: 4rem 0;
+  margin-bottom: 8rem;
   &__item {
-    padding-right: 4rem;
+    padding: 2rem;
+    width: 33.3%;
+    transition: all 0.3s ease-in-out;
+    border-radius: 0.2rem;
+    &:hover {
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+      padding: 1.4rem 2rem 2.6rem 2rem;
+      cursor: pointer;
+      svg {
+        color: $gray100;
+        fill: $gray100 !important;
+      }
+      .heading2,
+      p {
+        color: $gray900;
+      }
+    }
   }
 }
 
 .works {
+  &__item:first-child {
+    margin-top: 8rem;
+  }
   &__item {
-    display: flex;
+    padding: 0;
+    margin: 2rem;
+    max-width: 50%;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      transform: scale(1.05);
+    }
+    & .thumbnail {
+      background-color: $gray100;
+      //   box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3);
+      //   box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.4);
+      margin-bottom: 1.6rem;
+      border-radius: 0.2rem;
+      img {
+        border-radius: 0.2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 996px) {
+  .showcase {
+    height: 80vh;
+    &__description {
+      font-size: 1.1rem;
+    }
+  }
+  .services {
+    margin: 0;
+
+    &__item {
+      margin: 0;
+      padding: 2rem;
+      width: 100%;
+    }
+    display: block;
+    width: 100%;
+  }
+
+  .works {
+    display: block;
+    &__item:first-child {
+      margin-top: 0rem;
+    }
+    &__item {
+      padding: 2rem;
+      margin: 0;
+      width: 100%;
+    }
   }
 }
 
@@ -92,11 +174,21 @@ p {
     font-size: 2.2rem;
     line-height: 2.2 * 1.2rem;
   }
+  .services {
+    &__item {
+      margin: 0;
+    }
+  }
+  .row {
+    display: block;
+  }
+  .works {
+    &__item {
+      padding: 2rem;
+      max-width: 100%;
+    }
+  }
 }
 
 @media (max-width: 375px) {
-  .services {
-    display: block;
-    width: 100%;
-  }
 }
